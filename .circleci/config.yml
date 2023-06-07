@@ -29,7 +29,7 @@ jobs:
           name: "Run Scan"
           command: |
             pushd ..
-            wget https://github.com/Checkmarx/ast-cli/releases/download/2.0.34/ast-cli_2.0.34_linux_x64.tar.gz
+            wget https://github.com/Checkmarx/ast-cli/releases/download/2.0.47/ast-cli_2.0.47_linux_x64.tar.gz
             tar xzvf ast-cli_*.tar.gz
             wget https://sca-downloads.s3.amazonaws.com/cli/1.5.71/ScaResolver-linux64.tar.gz
             tar -xzvf ScaResolver-linux64.tar.gz
@@ -59,5 +59,5 @@ jobs:
             rm -rf cxone_reporting_circleci
             git clone https://github.com/louispCx/cxone_reporting_circleci.git
             chmod a+x cxone_reporting_circleci/pr_comment_cli.sh
-            cxone_reporting_circleci/pr_comment_cli.sh
+            cxone_reporting_circleci/pr_comment_cli.sh 
  
